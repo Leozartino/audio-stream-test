@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { AudioService } from './audio.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'audio-stream-test';
+  constructor(public audioService: AudioService) {}
+
+  toggleRecording() {
+    if (this.audioService.isRecordingActive()) {
+      this.audioService.stopRecording();
+    } else {
+      this.audioService.startRecording();
+    }
+  }
 }
