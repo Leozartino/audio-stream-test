@@ -19,7 +19,7 @@ export class AudioService {
       });
 
       this.webSocket = new WebSocket(
-        'ws://localhost:5001/api/booking/api/audiostream/stream'
+        'ws://localhost:3000/api/audiostream/stream'
       );
 
       this.webSocket.onopen = () => {
