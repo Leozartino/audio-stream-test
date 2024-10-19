@@ -18,9 +18,7 @@ export class AudioService {
         mimeType: 'audio/webm; codecs=opus',
       });
 
-      this.webSocket = new WebSocket(
-        'ws://localhost:3000/api/audiostream/stream'
-      );
+      this.webSocket = new WebSocket('ws://localhost:3000/audiostream/stream');
 
       this.webSocket.onopen = () => {
         this.mediaRecorder.start(1000);
