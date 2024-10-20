@@ -79,7 +79,7 @@ export class AudioService implements OnDestroy {
       });
   }
 
-  stopRecording() {
+  public stopRecording(): void {
     if (this.isRecording) {
       this.mediaRecorder?.stop();
       this.isRecording = false;
@@ -90,7 +90,7 @@ export class AudioService implements OnDestroy {
     }
   }
 
-  isRecordingActive(): boolean {
+  public isRecordingActive(): boolean {
     return this.isRecording;
   }
 }
