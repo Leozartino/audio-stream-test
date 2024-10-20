@@ -29,7 +29,7 @@ export class AudioService implements OnDestroy {
     );
   }
 
-  startRecording() {
+  public startRecording(): void {
     if (this.isRecording) {
       console.warn('Recording is already in progress.');
       return;
