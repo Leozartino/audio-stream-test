@@ -1,3 +1,7 @@
-<button (click)="toggleRecording()">
-  {{ audioService.isRecordingActive() ? "Stop Recording" : "Start Recording" }}
-</button>
+<div class="container">
+  <h1>Audio Recording App</h1>
+  <button (click)="toggleRecording()">
+    {{ audioService.isRecordingActive() ? 'Stop Recording' : 'Start Recording' }}
+  </button>
+</div>
+
